@@ -1,3 +1,139 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = null;
 }
+
+
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/HospitalSystem.styles.css" asp-append-version="true" />
+    <title>Home Page</title>
+
+    <style>
+
+        body {
+            background-image: url('assets/homepage-site.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Montserrat;
+        }
+
+        .navbar-brand {
+            font-size: 1.7rem;
+        }
+
+        .btn--modal {
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    @* navbar *@
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+
+            <a style="margin-left: 43%" class="navbar-brand" href="#">Hospital System</a>
+
+            @* Botão de seleção da navbar *@
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            @* Aba Lateral do navbar *@
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" style="color:white; background-color:#3C3D37">
+
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="#">Hospital System - Menu</a>
+                    <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close" style="background-color:red"></button>
+                </div>
+
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="font-size:1.3rem">
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="https://localhost:7154/#" style="color:white">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color:white">Readme</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
+                                Cadastro
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" style="color:white; font-size: 1.3rem; background-color:#6e7065">
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Paciente</a></li>
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Colaborador</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Quero Contratar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal">Fale Conosco</a></li>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <h5 class="mt-3" style="color:white">Pesquisar dentro do site</h5>
+
+                    <form class="d-flex" role="Achar algo">
+                        <input class="form-control me-2" type="search" placeholder="Ex: Pediatria" aria-label="Pesquisa" style="color:white">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+    @* /////////////////////////////////// -- MODAL -- /////////////////////////////////// *@
+
+  
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="background-color:#3C3D37">
+            <div class="modal-content bg-secondary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">New message</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label" style="color:black">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label" style="color:black">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
