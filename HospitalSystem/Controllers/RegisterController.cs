@@ -6,9 +6,15 @@ namespace HospitalSystem.Controllers
     {
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult IndexColaborador()
         {
-            return View("Views/Hospital/RegistrationPage.cshtml");
+            return View("Views/Hospital/RegistrationPage-C.cshtml");
+        }
+
+        [HttpGet]
+        public IActionResult IndexPaciente()
+        {
+            return View("Views/Hospital/RegistrationPage-P.cshtml");
         }
 
         [HttpPost]

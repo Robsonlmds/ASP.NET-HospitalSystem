@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "Quero Contratar";
+}
+<h1>@ViewData["Title"]</h1>
+
+<form class="mt-5">
+
+    <div class="row mb-3">
+        <div class="form-group col-md-6">
+            <label for="Pessoa_CNPJ">CNPJ<span class="color-asterisco">  *</span></label>
+            <small>(Somente números)</small>
+            <input type="text" class="form-control" id="Pessoa_CNPJ" name="Pessoa.CNPJ" placeholder="CNPJ">
+        </div>
+        <div class="form-group col-lg-1 col-md-2 col-sm-4">
+            <label for="Pessoa_DDDFixo">DDD <span class="color-asterisco">  *</span></label>
+            <input type="text" class="form-control" id="Pessoa_DDDFixo" name="Pessoa.DDDFixo" placeholder="DDD" value="">
+        </div>
+        <div class="form-group col-lg-4 col-md-6 col-sm-4">
+            <label for="Pessoa_Telefone">Telefone Para Contato<span class="color-asterisco">  *</span></label>
+            <small>(Somente números)</small>
+            <input type="text" class="form-control" id="Pessoa_Telefone" name="Pessoa.Telefone" placeholder="Telefone" value="">
+        </div>
+        <div class="form-group col-lg-1 col-md-3 col-sm-4">
+            <label for="Pessoa_Ramal">Ramal</label>
+            <input type="text" class="form-control" id="Pessoa_Ramal" name="Pessoa.Ramal" placeholder="Ramal" value="">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="form-group col-md-6">
+            <label for="Pessoa_Email">E-mail<span class="color-asterisco">  *</span></label>
+            <input type="email" class="form-control" id="Pessoa_Email" name="Pessoa.Email" placeholder="E-mail">
+        </div>
+        <div class="form-group d-none">
+            <input id="Site_IdSite" name="Site.IdSite" type="hidden" value="61" />
+        </div>
+        <div class="form-group d-none">
+            <input id="IP" name="IP" type="hidden" />
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Pessoa_Email">Confirmar E-mail<span class="color-asterisco">  *</span></label>
+            <input type="email" class="form-control" id="Pessoa_Confirmar_Email" name="Pessoa.Confirmar.Email" placeholder="Confirmar E-mail">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="form-group col-md-6">
+            <label for="Pessoa_RazaoSocial">Razão Social<span class="color-asterisco">  *</span></label>
+            <input type="text" class="form-control" id="Pessoa_RazaoSocial" name="Pessoa.RazaoSocial" placeholder="Razão Social">
+        </div>
+
+        <div class="col-6">
+
+            <label>Conheceu por onde:</label>
+
+            <select name="qtdAdults" class="form-control" required>
+                <option value="indicacao">Indicação</option>
+                <option value="facebook">Facebook</option>
+                <option value="instagram">Instagram</option>
+                <option value="twitter">Twitter</option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="youtube">YouTube</option>
+                <option value="tiktok">TikTok</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <button type="submit" class="btn btn-outline-success mt-3">Cadastrar</button>
+
+</form>

@@ -23,6 +23,12 @@ namespace HospitalSystem.Controllers
             return View("Readme");
         }
 
+        [HttpGet]
+        public IActionResult Hire()
+        {
+            return View("Hire");
+        }
+
 
     }
 }

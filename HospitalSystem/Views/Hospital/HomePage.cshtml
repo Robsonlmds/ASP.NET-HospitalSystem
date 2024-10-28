@@ -2,7 +2,6 @@
     Layout = null;
 }
 
-
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="auto">
 <head>
@@ -14,6 +13,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HospitalSystem.styles.css" asp-append-version="true" />
+
     <title>Home Page</title>
 
     <style>
@@ -65,19 +65,19 @@
                             <a class="nav-link active" aria-current="page" href="https://localhost:7154/#" style="color:white">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color:white">Readme</a>
+                            <a class="nav-link" href="#" style="color:white" onclick="@("window.location.href='" + @Url.Action("Readme", "Hospital") + "'");">Readme</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white">
                                 Cadastro
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" style="color:white; font-size: 1.3rem; background-color:#6e7065">
-                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Paciente</a></li>
-                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Colaborador</a></li>
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("IndexPaciente", "Register") + "'");">Paciente</a></li>
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("IndexColaborador", "Register") + "'");">Colaborador</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Index", "Register") + "'");">Quero Contratar</a></li>
+                                <li><a class="dropdown-item" onclick="@("window.location.href='" + @Url.Action("Hire", "Hospital") + "'");">Quero Contratar</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -86,47 +86,45 @@
                                 </li>
                             </ul>
                         </li>
-
                     </ul>
 
                     <h5 class="mt-3" style="color:white">Pesquisar dentro do site</h5>
 
-                    <form class="d-flex" role="Achar algo">
-                        <input class="form-control me-2" type="search" placeholder="Ex: Pediatria" aria-label="Pesquisa" style="color:white">
+                    <form class="d-flex" role="Achar algo" method="post" action="@Url.Action("Find","Find")">
+                        <input class="form-control me-2" type="search" placeholder="Ex: Pediatria" aria-label="Pesquisa" style="color:white" name="tempFind">
+
                         <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
+
                 </div>
             </div>
-
         </div>
     </nav>
 
     @* /////////////////////////////////// -- MODAL -- /////////////////////////////////// *@
 
-  
-
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" style="background-color:#3C3D37">
             <div class="modal-content bg-secondary">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">New message</h5>
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">Fale conosco</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label" style="color:black">Recipient:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <label for="recipient-email" class="col-form-label" style="color:black">Email:</label>
+                            <input type="email" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" style="color:black">Message:</label>
+                            <label for="message-text" class="col-form-label" style="color:black">Mensagem:</label>
                             <textarea class="form-control" id="message-text"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success">Enviar mensagem</button>
                 </div>
             </div>
         </div>
