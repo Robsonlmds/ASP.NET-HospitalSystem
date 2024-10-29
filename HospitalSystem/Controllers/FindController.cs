@@ -15,18 +15,21 @@ namespace HospitalSystem.Controllers
         [HttpPost]
         public IActionResult Find(string tempFind)
         {
-            string[] tagsViews = { "fale conosco+TalkToUs", "conosco+TalkToUs", "quero contratar+Hire", "paciente+RegistrationPage-P", "colaborador+RegistrationPage-C", "cadastroRegistrationPage-P", "sobre+Readme", "readme+Readme", "Home+HomePage", "Pagina inicial+HomePage" };
+            string[] tagsViews = { "fale conosco+TalkToUs+", "conosco+TalkToUs", "quero contratar+Hire+Hospital", "paciente+RegistrationPage-P+Register", "colaborador+RegistrationPage-C+Register", "cadastroRegistrationPage-P+Register", "sobre+Readme+Register", "readme+Readme+Register", "Home+Index+Hospital", "Pagina inicial+Index+Hospital" };
 
             foreach (string x in tagsViews)
             {
-                if (tempFind.Contains(x) == true)
+                if (x.Contains(tempFind))
                 {
                     string[] tempTags = x.Split("+");
 
-                    var view = tempTags[0];
-                    var controller = tempTags[1];
+                    var view = tempTags[1].Replace(" ","");
+                    var controller = tempTags[2].Replace(" ","");
 
-                    return View(view+controller);
+                    return RedirectToAction(view, controller);
+                    /*Pagina inicial+HomePage + Hospital*/
+
+                  /*  return View("Views/Hospital/HomePage.cshtml");*/
                 }
             }
 

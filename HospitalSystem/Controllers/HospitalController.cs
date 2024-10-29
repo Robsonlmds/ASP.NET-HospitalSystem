@@ -11,12 +11,6 @@ namespace HospitalSystem.Controllers
             return View("HomePage");
         }
 
-        [HttpPost]
-        public IActionResult Index(string inputUsername)
-        {
-            return View();
-        }
-
         [HttpGet]
         public IActionResult Readme()
         {
@@ -27,6 +21,12 @@ namespace HospitalSystem.Controllers
         public IActionResult Hire()
         {
             return View("Hire");
+        }
+
+        [HttpPost]
+        public IActionResult Index(string inputUsername)
+        {
+            return View();
         }
 
 
