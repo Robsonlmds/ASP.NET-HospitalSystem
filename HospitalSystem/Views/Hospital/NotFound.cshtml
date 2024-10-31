@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Nada encontrado!";
+}
+
+<section id="NotFound">
+
+    <div class="text-center">
+        <h1>@ViewData["Title"]</h1>
+
+        <p style="font-size: 8rem">404</p>
+
+        <button class="btn btn-outline-success" onclick="@("window.location.href='" + @Url.Action("Index", "Hospital") + "'");">Voltar para Pagina inicial</button></>
+    </div>
+
+</section>

@@ -15,6 +15,12 @@ namespace HospitalSystem.Controllers
         public IActionResult Readme()
         {
             return View("Readme");
+        }  
+        
+        [HttpGet]
+        public IActionResult TalkToUs()
+        {
+            return View("TalkToUs");
         }
 
         [HttpGet]
