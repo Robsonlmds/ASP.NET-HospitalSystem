@@ -81,7 +81,7 @@ namespace HospitalSystem.Controllers
 
                     return RedirectToAction(view, controller);
                 }
-                //return View("Views/Hospital/NotFound.cshtml");
+              //return View("Views/Hospital/NotFound.cshtml");
             }
             return View("Views/Hospital/NotFound.cshtml");
         }
