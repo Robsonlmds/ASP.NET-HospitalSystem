@@ -16,6 +16,8 @@
   ![Demonstração do HospitalSystem](HospitalSystem/wwwroot/assets/video-hotel.gif)
 </div>
 
+O **Hospital System** é uma aplicação web desenvolvida para gerenciar o fluxo de informações e permitir o acesso a diversas funcionalidades de um hospital, incluindo navegação fácil, cadastro de pacientes e colaboradores, além de um sistema de contato via formulário. Esta aplicação utiliza ASP.NET Core com MVC e integrações com Bootstrap para um design moderno e responsivo.
+
 ## 📋 Funcionalidades Principais
 
 ### Navegação e Menu Lateral
