@@ -65,11 +65,9 @@ As cores usadas na aplicação visam dar um tom profissional e intuitivo ao sist
 | Estilização     | [Bootstrap](https://getbootstrap.com/)              |
 
 ---
-
 ### Contribuição
 
 Este projeto é aberto a contribuições! Sinta-se à vontade para enviar pull requests ou abrir issues para melhorias.
-
 ---
 
 <div align="center">
