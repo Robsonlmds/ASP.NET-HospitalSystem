@@ -3,7 +3,6 @@
     <img src="https://readme-typing-svg.demolab.com?font=Silkscreen&size=20&duration=1500&pause=1000&center=true&vCenter=true&multiline=true&repeat=false&random=false&width=700&height=110&lines=Hospital+System" 
     alt="Typing SVG" />
   </a>
-  
   <h5 align="center"> 
     <b>✅ Completo</b> | <b>✅ Responsivo</b>
   </h5>
@@ -63,12 +62,6 @@ As cores usadas na aplicação visam dar um tom profissional e intuitivo ao sist
 | C#              | [Newtonsoft.Json](https://www.newtonsoft.com/json)  | [Visual Studio](https://visualstudio.microsoft.com/) |
 | HTTP Requests   | [HttpClient](https://learn.microsoft.com/en-us/dotnet/api/system.net.http.httpclient) | 
 | Estilização     | [Bootstrap](https://getbootstrap.com/)              |
-
----
-### Contribuição
-
-Este projeto é aberto a contribuições! Sinta-se à vontade para enviar pull requests ou abrir issues para melhorias.
----
 
 <div align="center">
 
