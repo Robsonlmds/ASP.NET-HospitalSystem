@@ -9,17 +9,51 @@
   </h5>
 </div>
 
-## Demonstração
+<div align="center">
+  
+  ## Demonstração
+  
+  ![Demonstração do HospitalSystem](HospitalSystem/wwwroot/assets/video-hotel.gif)
+</div>
 
-![Demonstração do FIPECar](assets/demo.gif)
+O **Hospital System** é uma aplicação web desenvolvida para gerenciar o fluxo de informações e permitir o acesso a diversas funcionalidades de um hospital, incluindo navegação fácil, cadastro de pacientes e colaboradores, além de um sistema de contato via formulário. Esta aplicação utiliza ASP.NET Core com MVC e integrações com Bootstrap para um design moderno e responsivo.
 
-## Funcionalidades
+## 📋 Funcionalidades Principais
 
-- **Consulta de Marcas** - Escolha entre tipos de veículos e consulte as marcas disponíveis.
-- **Consulta de Modelos** - Escolha uma marca e visualize os modelos disponíveis.
-- **Filtragem por Ano** - Filtre modelos por ano e obtenha informações detalhadas.
-- **Dados FIPE Atualizados** - Valores de veículos baseados em dados da API FIPE em tempo real.
+### Navegação e Menu Lateral
+- **Navbar Fixa**: Barra de navegação fixa no topo da página com acesso rápido a páginas principais como "Home", "Login" e "Readme".
+- **Menu Lateral Offcanvas**: A barra lateral inclui links para cadastro de usuários, contato e uma função de busca. Ao ser ativada, abre uma seção deslizante que mantém a interface organizada.
 
+### Modal de Contato
+- **Fale Conosco**: Um modal que permite ao usuário enviar uma mensagem de contato. Inclui um campo de email e uma área de texto para mensagem.
+- **Botões de Envio e Cancelamento**: Botões dedicados para enviar a mensagem ou cancelar e fechar o modal.
+
+### Pesquisa
+- **Formulário de Busca**: Formulário que permite aos usuários buscar conteúdos específicos no site, como especialidades médicas, localizações de clínicas ou outros detalhes.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **ASP.NET Core MVC**: Framework para criação de aplicações web dinâmicas.
+- **C#**: Linguagem principal usada para backend.
+- **Bootstrap 5**: Framework CSS para estilização responsiva e componentes visuais.
+- **HTML5 e CSS3**: Marcação e estilização da estrutura do site.
+- **JavaScript (jQuery)**: Para controle de comportamento dinâmico dos elementos de interface.
+
+---
+
+## 🎨 Design e Estilo
+
+### Paleta de Cores
+
+As cores usadas na aplicação visam dar um tom profissional e intuitivo ao sistema:
+- **Cor de fundo**: Imagem de fundo temática do hospital.
+- **Navbar e Menu Offcanvas**: Cores escuras para uma visualização clara e organizada.
+- **Botões**: Verde e vermelho para indicar ações de envio e cancelamento.
+
+### Fontes
+- **Montserrat** e **Agdasima**: Fontes importadas do Google Fonts para dar um aspecto moderno e legível.
 ---
 
 ## Stacks
@@ -31,28 +65,9 @@
 | Estilização     | [Bootstrap](https://getbootstrap.com/)              |
 
 ---
-
-### Entidades
-
-- **Dados** - Representa dados genéricos da API FIPE.
-- **Veiculo** - Representa o veículo e suas informações específicas.
-- **Modelos** - Contém uma lista de modelos para uma marca de veículo.
-
----
-
-### Fluxo de Operações
-
-1. **Selecionar Tipo de Veículo** - O usuário escolhe entre carro, moto ou caminhão.
-2. **Listar Marcas** - As marcas disponíveis para o tipo de veículo escolhido são exibidas.
-3. **Escolher Modelo** - Com base na marca, o usuário pode consultar os modelos.
-4. **Filtragem e Detalhes** - O usuário filtra o modelo e vê detalhes como ano e valor.
-
----
-
 ### Contribuição
 
 Este projeto é aberto a contribuições! Sinta-se à vontade para enviar pull requests ou abrir issues para melhorias.
-
 ---
 
 <div align="center">
